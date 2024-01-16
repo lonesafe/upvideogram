@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb669db7-0b21-47d1-af42-0fa2126210d9" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/BotConfigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/Trans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/TransUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/server/Handle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/AudioAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/AudioInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/Encoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/EncoderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/EncoderProgressListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/EncodingAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/FFMPEGExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/FFMPEGLocator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/FFmpegUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/InputFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/MultimediaInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/ProcessKiller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/RBufferedReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/VideoAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/VideoInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/VideoSize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/utils/ZdyFFMPEGLocator.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2NYIWk5R4ew6a4IP7Gy1aRWcr30" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "G:/workSpace/telegram-video",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\workSpace\telegram-video\src\main\java\trans\utils" />
+      <recent name="G:\workSpace\telegram-video\src\main\java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="trans.utils" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="cb669db7-0b21-47d1-af42-0fa2126210d9" name="变更" comment="" />
+      <created>1679834623906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679834623906</updated>
+      <workItem from="1679834625956" duration="9172000" />
+      <workItem from="1680189053663" duration="850000" />
+      <workItem from="1680619590590" duration="2240000" />
+      <workItem from="1681305483769" duration="601000" />
+      <workItem from="1705369240564" duration="3645000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/roubsite/trans/TransUtils.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -8,8 +8,8 @@ public class BotConfigure {
 	private static final String BOT_TOKEN = "2103390029:AAE9vKe7Mpb9emegMlaAWmsm4ypR3XY-fFY";
 
 	static {
-		BOT = new TelegramBot.Builder(BOT_TOKEN).apiUrl("http://152.69.194.94:8081/bot")
-				.fileApiUrl("http://152.69.194.94:8081/file/bot").build();
+		BOT = new TelegramBot.Builder(BOT_TOKEN).apiUrl("http://141.147.145.163:8081/bot")
+				.fileApiUrl("http://141.147.145.163:8081/file/bot").build();
 
 	}
 }

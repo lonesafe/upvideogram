@@ -22,7 +22,7 @@ public class Handle extends SimpleChannelInboundHandler {
         String message;
         switch (s) {
             case "getNowList":
-                message = (JSONObject.toJSONString(Trans.list));
+                message = (JSONObject.toJSONString(Trans.fileList));
                 break;
             case "getNowTrans":
                 Map<String, Object> map = new HashMap<>();

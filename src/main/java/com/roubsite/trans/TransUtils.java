@@ -80,7 +80,6 @@ public class TransUtils {
 
     }
 
-
     /**
      * 上传视频到群组
      */
@@ -103,8 +102,7 @@ public class TransUtils {
             e.printStackTrace();
         }
 
-        request.caption(videoName);
-
+        request.caption("#"+videoFile.getParentFile().getName()+"\n"+videoName);
         return request;
     }
 

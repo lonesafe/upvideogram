@@ -49,7 +49,7 @@ public class Trans {
 
         for (File file : fileList) {
             TransUtils.trans(file);
-            while (getThreadNum() > 10) {
+            while (getThreadNum() > 1) {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb669db7-0b21-47d1-af42-0fa2126210d9" name="变更" comment="变更">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/GenerateEncryptionKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +148,7 @@
       <workItem from="1716302622361" duration="60000" />
       <workItem from="1716646105103" duration="2378000" />
       <workItem from="1716695650584" duration="3270000" />
+      <workItem from="1716729584576" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <option name="closed" value="true" />
@@ -205,16 +205,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="变更" />
     <option name="LAST_COMMIT_MESSAGE" value="变更" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -5,10 +5,10 @@ import okhttp3.*;
 import sun.misc.IOUtils;
 
 import javax.crypto.Cipher;
+import javax.crypto.CipherInputStream;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.lang.ref.Reference;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -54,6 +54,9 @@ public class DownloadAndUpload {
     }
 
     public static void downloadFile(String path) throws Exception {
+        String outPutPath = "D:/opt/download/" + new File(path).getName();
+        new File("D:/opt/download/").mkdirs();
+
         String url = BASE_URL + "/api/v1/download/mp4";
         RequestBody requestBody = new FormBody.Builder()
                 .add("path", path)
@@ -68,23 +71,37 @@ public class DownloadAndUpload {
         if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
         byte[] iv = Base64.getDecoder().decode(response.header("X-Encryption-IV")); // 获取IV
-        byte[] encryptedData = response.body().bytes(); // 获取加密文件内容
 
-        // 解密数据
-        byte[] decryptedData = decryptData(encryptedData, iv);
-        String outPutPath = "D:/opt/download/" + new File(path).getName();
-        new File("D:/opt/download/").mkdirs();
-        // 保存解密后的数据到本地文件
-        Files.write(Paths.get(outPutPath), decryptedData);
-    }
+        InputStream inputStream = response.body().byteStream();
+        OutputStream outputStream = new FileOutputStream(outPutPath);
 
-    private static byte[] decryptData(byte[] encryptedData, byte[] iv) throws Exception {
+        byte[] buffer = new byte[1024];
+        int bytesRead;
+
+        while ((bytesRead = inputStream.read(buffer)) != -1) {
+            outputStream.write(buffer, 0, bytesRead);
+        }
+
+        inputStream.close();
+        outputStream.close();
+        FileInputStream fileInputStream = new FileInputStream(outPutPath);
+        OutputStream outputStream1 = new FileOutputStream(outPutPath+".dec.mp4");
+
         SecretKeySpec secretKey = new SecretKeySpec(ENCRYPTION_KEY.getBytes(), "AES");
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
         IvParameterSpec ivSpec = new IvParameterSpec(iv);
+        cipher.init(Cipher.DECRYPT_MODE, secretKey, ivSpec); // 初始化加密器
+        CipherInputStream cis = new CipherInputStream(fileInputStream, cipher);
 
-        cipher.init(Cipher.DECRYPT_MODE, secretKey, ivSpec);
+        int len;
+        while ((len = cis.read(buffer)) != -1) {
+            outputStream1.write(buffer, 0, len);
+        }
+        outputStream1.flush();
+        outputStream1.close();
+        //上传到tg
 
-        return cipher.doFinal(encryptedData);
+
     }
+
 }

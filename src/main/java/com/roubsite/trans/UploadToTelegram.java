@@ -94,12 +94,15 @@ public class UploadToTelegram {
     public static void upload1(File file, String mo) {
 
         System.out.println("当前上传：" + file.getAbsolutePath());
+
         try {
             SendVideo sendVideo = uploadVideo(file.getName().substring(0, file.getName().lastIndexOf('.')), file.getAbsolutePath(), mo);
             BOT.execute(sendVideo, new Callback<SendVideo, SendResponse>() {
 
                 @Override
                 public void onResponse(SendVideo sendVideo, SendResponse sendResponse) {
+//                    System.out.println(sendResponse.toString());
+                    new File(file.getAbsolutePath()+".jpg").delete();
                     if (file.delete()) {
                         System.out.println("删除成功");
                     } else {
@@ -138,7 +141,7 @@ public class UploadToTelegram {
         try {
             System.out.println("图片路径：" + videoPath + ".jpg");
             System.out.println("视频路径：" + videoPath);
-//            FFmpegUtils.getThumb(videoPath, videoPath + ".jpg", 0, 0, 1);
+            FFmpegUtils.getThumb(videoPath, videoPath + ".jpg", 0, 0, 1);
 //            byte[] jpg = IOUtils.toByteArray(Files.newInputStream(Paths.get(videoPath + ".jpg")));
 //            System.out.println("图片大小：" + jpg.length);
             request.thumbnail(new File(videoPath + ".jpg"));

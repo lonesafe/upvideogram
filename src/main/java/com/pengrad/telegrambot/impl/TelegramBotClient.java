@@ -42,9 +42,9 @@ public class TelegramBotClient {
         OkHttpClient client = getOkHttpClient(request);
 
         Call call = client.newCall(createRequest(request));
-        call.enqueue(new okhttp3.Callback() {
-            @Override
-            public void onResponse(Call call, Response response) {
+        try {
+            Response response = call.execute();
+            if (response.isSuccessful()) {
                 R result = null;
                 Exception exception = null;
                 try {
@@ -60,14 +60,12 @@ public class TelegramBotClient {
                 } else {
                     callback.onFailure(request, new IOException("Empty response"));
                 }
+            } else {
+                callback.onFailure(request, new IOException());
             }
-
-            @Override
-            public void onFailure(Call call, IOException e) {
-                callback.onFailure(request, e);
-            }
-        });
-
+        } catch (IOException e) {
+            callback.onFailure(request, e);
+        }
         return call::cancel;
     }
 

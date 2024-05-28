@@ -5,8 +5,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb669db7-0b21-47d1-af42-0fa2126210d9" name="变更" comment="变更">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Audio.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Birthdate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScope.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllChatAdministrators.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllGroupChats.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllPrivateChats.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeDefault.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChat.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChatAdministrators.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChatMember.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessIntro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessMessageDeleted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessOpeningHours.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/business/BusinessOpeningHoursInterval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/CallbackGame.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/ForceReply.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/InlineKeyboardButton.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/shared/SharedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/CopyMessages.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/GetBusinessConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/ReplaceStickerInSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/response/GetBusinessConnectionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/response/UserChatBoostsResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/UploadThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/split-video.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Audio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/ChatShared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/ChatShared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/StickerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/StickerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/UsersShared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/UsersShared.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScope.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllChatAdministrators.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllGroupChats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeAllPrivateChats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandScopeDefault.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChatAdministrators.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/botcommandscope/BotCommandsScopeChatMember.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/CallbackGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/ChatAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/ChatAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/ForceReply.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/InlineKeyboardButton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/InputSticker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/InputSticker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/KeyboardButtonRequestChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/KeyboardButtonRequestChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/KeyboardButtonRequestUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/model/request/KeyboardButtonRequestUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/AbstractSendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/AbstractSendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/AddStickerToSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/AddStickerToSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/BaseRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/BaseRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/CopyMessages.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/CreateNewStickerSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/CreateNewStickerSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SendChatAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SendChatAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SendMediaGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SendMediaGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SetStickerSetThumbnail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/SetStickerSetThumbnail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/UploadStickerFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/request/UploadStickerFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/response/UserChatBoostsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/utility/BotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pengrad/telegrambot/utility/BotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/BotConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/BotConfigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/DownloadAndUpload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/GenerateEncryptionKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/Trans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/TransUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/UploadToTelegram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/server/Handle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/roubsite/trans/server/Server.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +116,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/workSpace/telegram-video/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/data/IdeaProjects/upvideogram/src/main/java&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,12 +125,14 @@
     &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/roubsite/trans" />
       <recent name="G:\workSpace\telegram-video\src\main\java" />
       <recent name="G:\workSpace\telegram-video\src\main\java\trans\utils" />
     </key>
@@ -149,6 +220,9 @@
       <workItem from="1716646105103" duration="2378000" />
       <workItem from="1716695650584" duration="3270000" />
       <workItem from="1716729584576" duration="1382000" />
+      <workItem from="1716795945564" duration="7661000" />
+      <workItem from="1716853239121" duration="17745000" />
+      <workItem from="1716899233777" duration="929000" />
     </task>
     <task id="LOCAL-00001" summary="变更">
       <option name="closed" value="true" />
@@ -203,6 +277,7 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="变更" />
     <option name="LAST_COMMIT_MESSAGE" value="变更" />
   </component>

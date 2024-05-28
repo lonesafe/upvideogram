@@ -18,7 +18,9 @@ public class BotConfigure {
                 readTimeout(1, TimeUnit.HOURS).
                 writeTimeout(1, TimeUnit.HOURS).
                 callTimeout(1, TimeUnit.HOURS).build();
-        BOT = new TelegramBot.Builder(BOT_TOKEN).apiUrl(BOT_UTL + "/bot").okHttpClient(okHttpClient).fileApiUrl(BOT_UTL + "/file/bot").build();
+        BOT = new TelegramBot.Builder(BOT_TOKEN).apiUrl(BOT_UTL + "/bot")
+                .okHttpClient(okHttpClient)
+                .fileApiUrl(BOT_UTL + "/file/bot").build();
 
     }
 }

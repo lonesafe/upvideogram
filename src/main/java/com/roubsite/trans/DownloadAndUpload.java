@@ -17,11 +17,11 @@ import java.util.Map;
 public class DownloadAndUpload {
     static Logger logger = LogManager.getLogger(DownloadAndUpload.class);
     public static final String BASE_URL = "https://tgvideo.roubsite.com";
-//    private static final String BASE_URL = "http://127.0.0.1:8080";
+    //    private static final String BASE_URL = "http://127.0.0.1:8080";
     private static final String ENCRYPTION_KEY = "TKj1iBjFgJDRmEWY1SxrHw==";
     public static OkHttpClient client = new OkHttpClient();
-//    public static final String BASE_PATH="D:/download/";
-    public static final String BASE_PATH="/data/download/";
+    //    public static final String BASE_PATH="D:/download/";
+    public static final String BASE_PATH = "/data/download/";
 
     public static void main(String[] args) throws Exception {
 //        args = new String[]{"G:\\新建文件夹\\"};
@@ -48,8 +48,14 @@ public class DownloadAndUpload {
                 for (String file : (List<String>) map.get("data")) {
                     try {
                         downloadFile(file);
-                    }catch (Exception e){
-                        logger.error("下载失败",e);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        String outPutPath = BASE_PATH + new File(file).getName();
+                        if (new File(outPutPath).delete()) {
+                            System.out.println("删除成功:" + outPutPath);
+                        } else {
+                            System.out.println("删除失败:" + outPutPath);
+                        }
                     }
                 }
             }
@@ -61,8 +67,9 @@ public class DownloadAndUpload {
     }
 
     public static void downloadFile(String path) throws Exception {
-        System.out.println("当前下载："+path);
-        String outPutPath = BASE_PATH+new File(path).getName();
+        System.out.println("当前下载：" + path);
+
+        String outPutPath = BASE_PATH + new File(path).getName();
         new File(BASE_PATH).mkdirs();
 
         String url = BASE_URL + "/api/v1/download/mp4";
@@ -93,7 +100,7 @@ public class DownloadAndUpload {
         inputStream.close();
         outputStream.close();
         FileInputStream fileInputStream = new FileInputStream(outPutPath);
-        OutputStream outputStream1 = new FileOutputStream(outPutPath+".dec.mp4");
+        OutputStream outputStream1 = new FileOutputStream(outPutPath + ".dec.mp4");
 
         SecretKeySpec secretKey = new SecretKeySpec(ENCRYPTION_KEY.getBytes(), "AES");
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
@@ -110,9 +117,9 @@ public class DownloadAndUpload {
         fileInputStream.close();
         //上传到tg
         new File(outPutPath).delete();
-        new File(outPutPath+".dec.mp4").renameTo(new File(outPutPath));
+        new File(outPutPath + ".dec.mp4").renameTo(new File(outPutPath));
 //        new Thread(new UploadThread(outPutPath+".dec.mp4")).start();
-        UploadToTelegram.upload(new File(outPutPath),path);
+        UploadToTelegram.upload(new File(outPutPath), path);
     }
 
 }

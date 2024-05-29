@@ -102,18 +102,23 @@ public class UploadToTelegram {
                 @Override
                 public void onResponse(SendVideo sendVideo, SendResponse sendResponse) {
 //                    System.out.println(sendResponse.toString());
-                    new File(file.getAbsolutePath()+".jpg").delete();
+                    new File(file.getAbsolutePath() + ".jpg").delete();
                     if (file.delete()) {
-                        System.out.println("删除成功");
+                        System.out.println("删除成功:" + file.getAbsolutePath());
                     } else {
-                        System.out.println("删除失败");
+                        System.out.println("删除失败:" + file.getAbsolutePath());
                     }
                 }
 
                 @Override
                 public void onFailure(SendVideo sendVideo, IOException e) {
                     System.out.println("上传失败");
-                    e.printStackTrace();
+                    new File(file.getAbsolutePath() + ".jpg").delete();
+                    if (file.delete()) {
+                        System.out.println("删除成功:" + file.getAbsolutePath());
+                    } else {
+                        System.out.println("删除失败:" + file.getAbsolutePath());
+                    }
                 }
             });
         } catch (Exception e) {
@@ -128,8 +133,8 @@ public class UploadToTelegram {
         File videoFile = new File(videoPath);
         MultimediaInfo m = encoder.getInfo(videoFile);
         SendVideo request = new SendVideo(BotConfigure.chanelId, videoFile);
-        System.out.println("视频宽度："+m.getVideo().getSize().getWidth());
-        System.out.println("视频高度："+m.getVideo().getSize().getHeight());
+        System.out.println("视频宽度：" + m.getVideo().getSize().getWidth());
+        System.out.println("视频高度：" + m.getVideo().getSize().getHeight());
         request.height(m.getVideo().getSize().getHeight());
         request.width(m.getVideo().getSize().getWidth());
         try {
@@ -151,7 +156,7 @@ public class UploadToTelegram {
             e.printStackTrace();
         }
 
-        request.caption("#" + mo + "\n" + videoName.replace("trans_ok_",""));
+        request.caption("#" + mo + "\n" + videoName.replace("trans_ok_", ""));
         System.out.println("请求封装完成");
         return request;
     }

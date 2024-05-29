@@ -74,6 +74,8 @@ public class UploadToTelegram {
                 System.out.println("suc: " + suc);
                 System.out.println("err: " + err);
                 if (!suc.isEmpty()) {
+                    file.delete();
+                    System.out.println("源文件已删除:"+file.getAbsolutePath());
                     String[] files = suc.split("\n");
                     for (String s : files) {
                         if (!StringUtil.isNullOrEmpty(s)) {

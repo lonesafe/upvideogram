@@ -2,7 +2,6 @@ package com.roubsite.trans;
 
 import cn.hutool.crypto.SecureUtil;
 import com.pengrad.telegrambot.Callback;
-import com.pengrad.telegrambot.model.MessageEntity;
 import com.pengrad.telegrambot.request.SendVideo;
 import com.pengrad.telegrambot.response.SendResponse;
 import com.roubsite.trans.utils.Encoder;
@@ -17,16 +16,10 @@ import okhttp3.Response;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
 import org.apache.commons.exec.PumpStreamHandler;
-import org.apache.commons.exec.util.StringUtils;
-import org.apache.commons.io.IOUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import static com.roubsite.trans.BotConfigure.BOT;
 import static com.roubsite.trans.DownloadAndUpload.BASE_URL;
@@ -75,7 +68,7 @@ public class UploadToTelegram {
                 System.out.println("err: " + err);
                 if (!suc.isEmpty()) {
                     file.delete();
-                    System.out.println("源文件已删除:"+file.getAbsolutePath());
+                    System.out.println("remote file deleted:"+file.getAbsolutePath());
                     String[] files = suc.split("\n");
                     for (String s : files) {
                         if (!StringUtil.isNullOrEmpty(s)) {
@@ -93,34 +86,36 @@ public class UploadToTelegram {
         }
     }
 
-    public static void upload1(File file, String mo) {
+    public static void upload1(File file, String moduleName) {
 
-        System.out.println("当前上传：" + file.getAbsolutePath());
+        System.out.println("upload to telegram：" + file.getAbsolutePath());
 
         try {
-            SendVideo sendVideo = uploadVideo(file.getName().substring(0, file.getName().lastIndexOf('.')), file.getAbsolutePath(), mo);
+            SendVideo sendVideo = uploadVideo(file.getName().substring(0, file.getName().lastIndexOf('.')), file.getAbsolutePath(), moduleName);
             BOT.execute(sendVideo, new Callback<SendVideo, SendResponse>() {
 
                 @Override
                 public void onResponse(SendVideo sendVideo, SendResponse sendResponse) {
+                    System.out.println("upload to telegram true");
 //                    System.out.println(sendResponse.toString());
-                    new File(file.getAbsolutePath() + ".jpg").delete();
-                    if (file.delete()) {
-                        System.out.println("删除成功:" + file.getAbsolutePath());
-                    } else {
-                        System.out.println("删除失败:" + file.getAbsolutePath());
-                    }
+//                    new File(file.getAbsolutePath() + ".jpg").delete();
+//                    if (file.delete()) {
+//                        System.out.println("local file delete success:" + file.getAbsolutePath());
+//                    } else {
+//                        System.out.println("local file delete failed:" + file.getAbsolutePath());
+//                    }
                 }
 
                 @Override
                 public void onFailure(SendVideo sendVideo, IOException e) {
-                    System.out.println("上传失败");
-                    new File(file.getAbsolutePath() + ".jpg").delete();
-                    if (file.delete()) {
-                        System.out.println("删除成功:" + file.getAbsolutePath());
-                    } else {
-                        System.out.println("删除失败:" + file.getAbsolutePath());
-                    }
+                    e.printStackTrace();
+                    System.out.println("upload to telegram false");
+//                    new File(file.getAbsolutePath() + ".jpg").delete();
+//                    if (file.delete()) {
+//                        System.out.println("local file delete success:" + file.getAbsolutePath());
+//                    } else {
+//                        System.out.println("local file delete failed:" + file.getAbsolutePath());
+//                    }
                 }
             });
         } catch (Exception e) {

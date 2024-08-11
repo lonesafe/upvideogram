@@ -32,7 +32,7 @@ public class DownloadAndUpload {
     public static final String BASE_PATH = "/data/download/";
 
     public static void main(String[] args) throws Exception {
-//        UploadToTelegram.upload1(new File("/data/download/trans_ok_2024.04.20_20.33.37_evalewis-2.mp4"),"evalewis");
+//        UploadToTelegram.upload1(new File("/data/download/trans_ok_2024.04.17_19.09.28_evalewis-1.mp4"),"evalewis");
 
         Options options = new Options();
         Option pathOption = Option.builder("path")

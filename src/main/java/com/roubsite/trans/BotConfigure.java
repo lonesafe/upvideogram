@@ -11,7 +11,8 @@ public class BotConfigure {
     private static final String BOT_TOKEN = "2103390029:AAE9vKe7Mpb9emegMlaAWmsm4ypR3XY-fFY";
 
 //    private static final String BOT_UTL = "http://141.147.145.163:8081";
-    private static final String BOT_UTL = "http://[2603:c023:1:9701:9217:b4c0:dc6b:b61d]:8081";
+//    private static final String BOT_UTL = "http://[2603:c023:1:9701:9217:b4c0:dc6b:b61d]:8081";
+    private static final String BOT_UTL = "http://tgapi.thz3.xyz/";
 
 
     static {
